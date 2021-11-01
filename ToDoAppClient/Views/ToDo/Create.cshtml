@@ -1,0 +1,24 @@
+﻿@model ToDoApp_Client.Models.ItemViewModel
+@{
+    ViewData["Title"] = "Create New ToDo";
+}
+
+<div class="card">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="card-body card-padding form-horizontal">
+
+            <a href="@Url.Action("index", "todo")">Back</a>
+           <br />
+
+            @Html.Partial("_CreateOrUpdate", Model)
+
+            <br />
+            <button type="submit" name="save" style="width:100px">Save</button>
+        </div>
+
+
+    }
+</div>
+

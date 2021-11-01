@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ToDoServices/bin/Debug/netcoreapp3.1
+/ToDoServices/obj
+/TodoAppDb/obj/Debug
+/TodoAppDb/bin/Debug
+/ToDoApp.Repository/bin/Debug/netcoreapp3.1
+/ToDoApp.Repository/obj
+/ToDoAppApi/bin/Debug/net5.0
+/ToDoAppApi/obj
+/ToDoAppClient/bin/Debug/net5.0
+/ToDoAppClient/obj
+/ToDoAppCommon/bin/Debug/netcoreapp3.1
+/ToDoAppCommon/obj

@@ -1,0 +1,46 @@
+﻿@model ToDoApp_Client.Models.ItemsViewModel
+@{
+    ViewData["Title"] = "TODOs";
+}
+
+<div class="card">
+    <div class="card-header bgm-teal">
+        <h3>My todos</h3>
+
+        <a href="@Url.Action("index", "todo")">Refresh</a> &nbsp; &nbsp;
+        <a href="@Url.Action("Create", "todo")">Add New</a>
+
+    </div>
+
+    <div class="card-body card-padding">
+        <table id="products-grid" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Details</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (ItemViewModel item in Model.Items)
+                {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Details</td>
+                    <td>@item.DueDate</td>
+                    <td>@item.Status</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                    </td>
+                </tr>
+                }
+            </tbody>
+
+        </table>
+        <div id="products-grid-pager"></div>
+    </div>
+</div>
